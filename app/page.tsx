@@ -5,12 +5,12 @@ import {
   ShieldCheck,
   Microscope,
   ArrowRight,
-  Phone,
-  MapPin,
   Syringe,
   HeartPulse,
   Scissors,
 } from "lucide-react"
+import { BackLink } from "@/components/back-link/back-link"
+import { PageWrapper } from "@/components/layouts/page-wrapper/page-wrapper"
 
 import {
   Card,
@@ -22,7 +22,7 @@ import {
 
 export default function Page() {
   return (
-      <main className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100">
+      <PageWrapper className="px-0 py-0">
         {/* HERO */}
         <section className="px-6 py-20">
           <div className="mx-auto max-w-6xl">
@@ -45,115 +45,14 @@ export default function Page() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <a
+                <BackLink
                     href="#valasszon-rendelot"
-                    className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-6 py-3 font-medium text-white shadow-lg transition hover:bg-blue-700"
-                >
-                  Válasszon rendelőt
-                  <ArrowRight className="h-4 w-4" />
-                </a>
+                    label="Válasszon rendelőt"
+                    iconPosition="end"
+                    hoverDirection="right"
+                    className="mb-0 rounded-md bg-blue-600 px-6 py-3 font-medium text-white shadow-lg transition hover:bg-blue-700 hover:text-white w-full md:w-auto text-sm"
+                />
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICES */}
-        <section className="px-6 py-10">
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-slate-900">
-                Szolgáltatásaink
-              </h2>
-
-              <p className="mt-4 text-slate-600">
-                Korszerű diagnosztika és állatorvosi ellátás.
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-3">
-              <Card className="border-blue-200 bg-white shadow-md">
-                <CardHeader>
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
-                    <Stethoscope className="h-7 w-7 text-blue-600" />
-                  </div>
-
-                  <CardTitle>Általános Vizsgálatok</CardTitle>
-
-                  <CardDescription className="text-base">
-                    Teljes körű állatorvosi vizsgálatok és kezelések.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="border-blue-200 bg-white shadow-md">
-                <CardHeader>
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
-                    <Microscope className="h-7 w-7 text-blue-600" />
-                  </div>
-
-                  <CardTitle>Labor és Diagnosztika</CardTitle>
-
-                  <CardDescription className="text-base">
-                    Modern laborvizsgálatok és parazitológiai elemzések.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="border-blue-200 bg-white shadow-md">
-                <CardHeader>
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
-                    <ShieldCheck className="h-7 w-7 text-blue-600" />
-                  </div>
-
-                  <CardTitle>Megelőzés és Tanácsadás</CardTitle>
-
-                  <CardDescription className="text-base">
-                    Védőoltások, megelőző kezelések és szakmai tanácsadás.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="border-blue-200 bg-white shadow-md">
-                <CardHeader>
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
-                    <Syringe className="h-7 w-7 text-blue-600" />
-                  </div>
-
-                  <CardTitle>Oltások és Féreghajtás</CardTitle>
-
-                  <CardDescription className="text-base">
-                    Kötelező és ajánlott védőoltások, rendszeres féreghajtó kezelések.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="border-blue-200 bg-white shadow-md">
-                <CardHeader>
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
-                    <HeartPulse className="h-7 w-7 text-blue-600" />
-                  </div>
-
-                  <CardTitle>Sürgősségi Ellátás</CardTitle>
-
-                  <CardDescription className="text-base">
-                    Azonnali állatorvosi segítség sürgős esetekben, baleseteknél.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="border-blue-200 bg-white shadow-md">
-                <CardHeader>
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
-                    <Scissors className="h-7 w-7 text-blue-600" />
-                  </div>
-
-                  <CardTitle>Sebészet és Műtétek</CardTitle>
-
-                  <CardDescription className="text-base">
-                    Kisállat sebészeti beavatkozások, ivartalanítás és egyéb műtétek.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
             </div>
           </div>
         </section>
@@ -233,35 +132,108 @@ export default function Page() {
           </div>
         </section>
 
-        {/* CONTACT */}
-        <section className="px-6 py-16">
-          <div className="mx-auto max-w-5xl rounded-[32px] border border-blue-100 bg-white p-10 shadow-sm">
-            <div className="grid gap-8 md:grid-cols-2">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900">
-                  Kapcsolat
-                </h2>
+        {/* SERVICES */}
+        <section className="px-6 py-10">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold text-slate-900">
+                Szolgáltatásaink
+              </h2>
 
-                <p className="mt-4 leading-7 text-slate-600">
-                  Amennyiben kérdése van szolgáltatásainkkal kapcsolatban,
-                  forduljon hozzánk bizalommal.
-                </p>
-              </div>
+              <p className="mt-4 text-slate-600">
+                Korszerű diagnosztika és állatorvosi ellátás.
+              </p>
+            </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-slate-700">
-                  <Phone className="h-5 w-5 text-blue-600" />
-                  +36 30 123 4567
-                </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              <Card className="border-blue-100 bg-white shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-100">
+                    <Stethoscope className="h-7 w-7 text-blue-600" />
+                  </div>
 
-                <div className="flex items-center gap-3 text-slate-700">
-                  <MapPin className="h-5 w-5 text-blue-600" />
-                  Budapest, Magyarország
-                </div>
-              </div>
+                  <CardTitle>Általános Vizsgálatok</CardTitle>
+
+                  <CardDescription className="text-base">
+                    Teljes körű állatorvosi vizsgálatok és kezelések.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-blue-100 bg-white shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-100">
+                    <Microscope className="h-7 w-7 text-blue-600" />
+                  </div>
+
+                  <CardTitle>Labor és Diagnosztika</CardTitle>
+
+                  <CardDescription className="text-base">
+                    Modern laborvizsgálatok és parazitológiai elemzések.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-blue-100 bg-white shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
+                    <ShieldCheck className="h-7 w-7 text-blue-600" />
+                  </div>
+
+                  <CardTitle>Megelőzés és Tanácsadás</CardTitle>
+
+                  <CardDescription className="text-base">
+                    Védőoltások, megelőző kezelések és szakmai tanácsadás.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-blue-100 bg-white shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
+                    <Syringe className="h-7 w-7 text-blue-600" />
+                  </div>
+
+                  <CardTitle>Oltások és Féreghajtás</CardTitle>
+
+                  <CardDescription className="text-base">
+                    Kötelező és ajánlott védőoltások, rendszeres féreghajtó kezelések.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-blue-100 bg-white shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
+                    <HeartPulse className="h-7 w-7 text-blue-600" />
+                  </div>
+
+                  <CardTitle>Sürgősségi Ellátás</CardTitle>
+
+                  <CardDescription className="text-base">
+                    Azonnali állatorvosi segítség sürgős esetekben, baleseteknél.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-blue-100 bg-white shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-md bg-blue-100">
+                    <Scissors className="h-7 w-7 text-blue-600" />
+                  </div>
+
+                  <CardTitle>Sebészet és Műtétek</CardTitle>
+
+                  <CardDescription className="text-base">
+                    Kisállat sebészeti beavatkozások, ivartalanítás és egyéb műtétek.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
             </div>
           </div>
         </section>
-      </main>
+
+
+      </PageWrapper>
   )
 }
