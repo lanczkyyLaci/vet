@@ -1,0 +1,1 @@
+export const EMAIL_ADDRESS = 'info@allatorvos.hu';
