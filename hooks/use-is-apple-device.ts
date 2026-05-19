@@ -1,17 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
+
+const subscribe = () => () => {};
+
+const getSnapshot = (): boolean => {
+  const ua = navigator.userAgent;
+  return (
+    /iPhone|iPad|iPod|Macintosh|MacIntel|MacPPC|Mac68K/.test(ua) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 0)
+  );
+};
+
+const getServerSnapshot = (): boolean => false;
 
 export const useIsAppleDevice = (): boolean => {
-  const [isApple, setIsApple] = useState(false);
-
-  useEffect(() => {
-    const ua = navigator.userAgent;
-    const isAppleDevice =
-      /iPhone|iPad|iPod|Macintosh|MacIntel|MacPPC|Mac68K/.test(ua) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 0);
-    setIsApple(isAppleDevice);
-  }, []);
-
-  return isApple;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 };
