@@ -32,9 +32,15 @@ export const ContactForm = () => {
   return (
     <div className="mx-auto max-w-2xl">
       {/* Back */}
-      <BackLink href={paths.home.getHref()} label="Vissza a főoldalra" />
+      <BackLink
+        href={paths.home.getHref()}
+        variant="outline"
+        hoverDirection="left"
+        label="Vissza a főoldalra"
+        className="mb-6"
+      />
 
-      <div className="rounded-md border border-blue-100 bg-white p-4 shadow-sm">
+      <div className="rounded-xl border border-blue-100 bg-white p-4 shadow-sm">
         {/* Header */}
         <div className="mb-8 flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100">
@@ -96,7 +102,7 @@ export const ContactForm = () => {
               href={gmailUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 rounded-md border border-blue-200 bg-blue-600 p-4 text-white transition-transform duration-150 hover:bg-blue-700"
+              className="flex-1 rounded-xl border border-blue-200 bg-blue-600 p-4 text-white transition-transform duration-150 hover:bg-blue-700"
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -115,7 +121,7 @@ export const ContactForm = () => {
             {isApple && (
               <a
                 href={mailtoUrl}
-                className="flex-1 rounded-md border border-blue-200 bg-slate-900 p-4 text-white transition-transform duration-150 hover:bg-slate-800"
+                className="flex-1 rounded-xl border border-blue-200 bg-slate-900 p-4 text-white transition-transform duration-150 hover:bg-slate-800"
               >
                 <div className="flex items-start justify-between">
                   <div>
@@ -134,7 +140,7 @@ export const ContactForm = () => {
             {/* Mail App */}
             <a
               href={mailtoUrl}
-              className="flex-1 rounded-md border border-blue-200 bg-white p-4 transition-transform duration-150 hover:border-blue-300 hover:bg-blue-50"
+              className="flex-1 rounded-xl border border-blue-200 bg-white p-4 transition-transform duration-150 hover:border-blue-300 hover:bg-blue-50"
             >
               <div className="flex items-start justify-between">
                 <div>
