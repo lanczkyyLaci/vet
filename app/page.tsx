@@ -5,10 +5,12 @@ import { ServicesSection } from "@/components/home/services-section";
 
 export default function Page() {
   return (
-    <PageWrapper>
+    <>
       <HeroSection />
-      <ClinicSelectorSection />
-      <ServicesSection />
-    </PageWrapper>
+      <PageWrapper>
+        <ClinicSelectorSection />
+        <ServicesSection />
+      </PageWrapper>
+    </>
   );
 }

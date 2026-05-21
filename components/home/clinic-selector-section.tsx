@@ -13,16 +13,11 @@ export function ClinicSelectorSection() {
         <div className="mb-12 text-center">
           <BadgeLabel
             icon={Sparkles}
-            label="Professzionalis allatorvosi ellatas"
+            label="Professzionális állatorvosi ellátás"
             className="mb-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 text-blue-700"
           />
 
-          <Title
-            as="h2"
-            size="xl"
-            title="Válasszon rendelőt"
-            variant="blue"
-          />
+          <Title as="h2" size="xl" title="Válasszon rendelőt" variant="blue" />
           <Description className="mt-2" size="lg">
             A kiválasztott felület később bármikor módosítható.
           </Description>

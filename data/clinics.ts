@@ -20,7 +20,7 @@ export const clinics: ClinicData[] = [
   {
     href: "/kisesnagyallat",
     image: "/small-large-animals.webp",
-    imageAlt: "Kis- es Nagyallat Rendelo",
+    imageAlt: "Kis- és Nagyállat Rendelő",
     badgeIcon: PawPrint,
     badgeLabel: "Magánrendelő",
     doctorName: "Dr. Török Tamás",
@@ -41,7 +41,7 @@ export const clinics: ClinicData[] = [
   {
     href: "/hivatalos",
     image: "/official-clinic.webp",
-    imageAlt: "Hivatalos Allatorvosi Rendelo",
+    imageAlt: "Hivatalos Állatorvosi Rendelő",
     badgeIcon: Award,
     badgeLabel: "Kastélydomb Állatorvosi Rendelő",
     doctorName: "Dr. Török Tamás",
@@ -53,17 +53,17 @@ export const clinics: ClinicData[] = [
     variant: "teal",
     featureGroups: [
       [
-        { icon: Syringe, label: "Vedooltasok", color: "blue" },
-        { icon: Bug, label: "Fereghajtas", color: "indigo" },
-        { icon: Scissors, label: "Sebeszet", color: "cyan" },
-        { icon: HeartPulse, label: "Belgyogyaszat", color: "sky" },
-        { icon: MonitorSpeaker, label: "UH vizsgalat", color: "blue" },
-        { icon: Sparkle, label: "Fogkoeltavolitas", color: "indigo" },
+        { icon: Syringe, label: "Védőoltások", color: "blue" },
+        { icon: Bug, label: "Féreghajtás", color: "indigo" },
+        { icon: Scissors, label: "Sebészet", color: "cyan" },
+        { icon: HeartPulse, label: "Belgyógyászat", color: "sky" },
+        { icon: MonitorSpeaker, label: "UH vizsgálat", color: "blue" },
+        { icon: Sparkle, label: "Fogkőeltávolítás", color: "indigo" },
         { icon: Cpu, label: "Microchip", color: "cyan" },
       ],
       [
-        { icon: FileText, label: "Igazolasok", color: "teal" },
-        { icon: BookOpen, label: "Utlevelek", color: "emerald" },
+        { icon: FileText, label: "Igazolások", color: "teal" },
+        { icon: BookOpen, label: "Útlevelek", color: "emerald" },
         { icon: Truck, label: "Export-Import", color: "cyan" },
       ],
     ],
