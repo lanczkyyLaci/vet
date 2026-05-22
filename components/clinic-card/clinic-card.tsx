@@ -104,16 +104,6 @@ export function ClinicCard({ clinic }: { clinic: ClinicData }) {
           </div>
 
           <div>
-            {clinic.titleBadge && (
-              <div
-                className={cn(
-                  "mb-1 inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold",
-                  style.titleBadge
-                )}
-              >
-                {clinic.titleBadge}
-              </div>
-            )}
             <h3 className="text-xl font-bold text-slate-900">{clinic.title}</h3>
             <div className="mt-2 flex items-center gap-1.5 text-sm text-slate-500">
               <MapPin className="h-4 w-4" />

@@ -35,7 +35,7 @@ export const clinics: ClinicData[] = [
       message:
         "A délutáni Kisállat rendelés Várpalotán, a Kastélydomb Állatorvosi Rendelőben elérhető!",
       secondaryMessage:
-        "Ősiben csak elore megbeszelt idopontban mukodik a kisallatok ellatasa!",
+        "Ősiben csak előre megbeszélt időpontban működik a kisállatok ellátása!",
     },
   },
   {

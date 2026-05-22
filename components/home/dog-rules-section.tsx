@@ -1,36 +1,37 @@
-import { Scale, AlertTriangle, Dog } from "lucide-react";
-import { rules } from "./_utils/rules";
-import { colorClasses } from "../services-section/_utils/color-classes";
+import { dogRules, dogRulesColorClasses } from "@/data/dog-rules";
+import { AlertTriangle, Dog, Scale, Sparkles } from "lucide-react";
+import { Section } from "@/components/layouts/section/section";
+import { BadgeLabel } from "@/components/ui/badge-label";
+import { Title } from "@/components/ui/title";
+import { Description } from "@/components/ui/description";
 
 export function DogRulesSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20">
-      {/* Background decorative elements */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 -right-40 h-80 w-80 rounded-full bg-gradient-to-br from-amber-100/40 to-orange-100/30 blur-3xl" />
-        <div className="absolute bottom-40 -left-40 h-96 w-96 rounded-full bg-gradient-to-br from-blue-100/30 to-indigo-100/30 blur-3xl" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl px-4">
+    <Section id="dog-rules-section" className="relative">
+      <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="mb-12 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500/10 to-orange-500/10 px-4 py-2 text-sm font-medium text-amber-700">
-            <Scale className="h-4 w-4" />
-            Jogszabaly
-          </div>
-          <h2 className="bg-gradient-to-r from-slate-900 via-amber-900 to-orange-900 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-4xl">
-            Kutyatartas Szabalyai
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
-            A kutyak tartasanak szabalyait a 41/2010. (II. 26.) Korm. rendelet
-            szabalyozza, ami vilagosan megszabja a tulajdonos feladatait.
-          </p>
+          <BadgeLabel
+            icon={Scale}
+            label="Jogszabaly"
+            className="mb-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500/10 to-orange-500/10 px-4 py-2 text-sm font-medium text-amber-700"
+          />
+
+          <Title
+            as="h2"
+            size="xl"
+            title="Kutyatartás szabályai"
+            variant="blue"
+          />
+          <Description className="mt-2" size="lg">
+            Fontos tudnivalók a felelős és biztonságos kutyatartásról.
+          </Description>
         </div>
 
         {/* Rules Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {rules.map((rule, index) => {
-            const colors = colorClasses[rule.color];
+          {dogRules.map((rule, index) => {
+            const colors = dogRulesColorClasses[rule.color];
             const Icon = rule.icon;
 
             return (
@@ -92,16 +93,16 @@ export function DogRulesSection() {
               <AlertTriangle className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h4 className="font-semibold text-amber-900">Fontos tudnivalo</h4>
+              <h4 className="font-semibold text-amber-900">Fontos tudnivaló</h4>
               <p className="mt-1 text-sm leading-relaxed text-amber-800">
-                Szajkosarat hasznalni kizarolag az egyed jellemzoen agressziv
-                magatartasanak ismerete eseten kell, kiveve ha kulon jogszabaly
-                a szajkosar hasznalatat eloirja.
+                Szájkosarat használni kizárólag az egyed jellemzően agresszív
+                magatartásának ismerete esetén kell, kivéve ha külön jogszabály
+                a szájkosár használatát előírja.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
